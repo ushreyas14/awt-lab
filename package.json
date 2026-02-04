@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "demo.js",
   "scripts": {
+    "start": "node lab1/lab1.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

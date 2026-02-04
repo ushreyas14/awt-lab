@@ -1,0 +1,22 @@
+[2026-01-21T08:45:37.295Z] Event server running at http://localhost:8080
+[2026-01-21T08:45:37.717Z] Ava logged in
+[2026-01-21T08:45:38.110Z] Purchase recorded: Headphones
+[2026-01-21T08:45:38.509Z] Profile update: Shipping Address
+[2026-01-21T08:45:38.908Z] Noah logged in
+[2026-01-21T08:45:39.309Z] Purchase recorded: Keyboard
+[2026-01-21T08:45:39.711Z] Ava logged out
+[2026-01-21T08:45:40.117Z] Profile update: Payment Method
+[2026-01-21T08:45:40.506Z] Noah logged out
+[2026-01-21T08:45:41.326Z] --- Event Summary ---
+[2026-01-21T08:45:41.327Z] user-login: 2
+[2026-01-21T08:45:41.327Z] user-logout: 2
+[2026-01-21T08:45:41.328Z] user-purchase: 2
+[2026-01-21T08:45:41.329Z] profile-update: 2
+[2026-01-21T08:45:41.329Z] ----------------------
+[2026-01-21T08:45:59.375Z] a logged in
+[2026-01-21T08:46:04.280Z] --- Event Summary ---
+[2026-01-21T08:46:04.281Z] user-logout: 2
+[2026-01-21T08:46:04.281Z] user-login: 3
+[2026-01-21T08:46:04.281Z] user-purchase: 2
+[2026-01-21T08:46:04.282Z] profile-update: 2
+[2026-01-21T08:46:04.282Z] ----------------------

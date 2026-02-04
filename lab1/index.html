@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Maestro</title>
+</head>
+<body>
+    <h1>Event Maestro</h1>
+
+    <section>
+        <h2>Send an Event</h2>
+        <form id="eventForm">
+            <label for="eventType">Event Type:</label>
+            <select id="eventType" name="type">
+                <option value="user-login">user-login</option>
+                <option value="user-logout">user-logout</option>
+                <option value="user-purchase">user-purchase</option>
+                <option value="profile-update">profile-update</option>
+            </select>
+            <br>
+            <label for="eventDetail">Detail:</label>
+            <input id="eventDetail" name="detail" type="text" required>
+            <br>
+            <button type="submit">Emit Event</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Stats</h2>
+        <button id="refreshStats" type="button">Refresh Stats</button>
+        <pre id="statsOutput">{}</pre>
+    </section>
+
+    <section>
+        <h2>Summary</h2>
+        <button id="summaryBtn" type="button">Log Summary</button>
+    </section>
+
+    <script>
+        const eventForm = document.getElementById('eventForm');
+        const statsOutput = document.getElementById('statsOutput');
+        const refreshStats = document.getElementById('refreshStats');
+        const summaryBtn = document.getElementById('summaryBtn');
+
+        const fetchJson = async (url, options) => {
+            const response = await fetch(url, options);
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.error || 'Request failed');
+            }
+            return data;
+        };
+
+        const updateStats = async () => {
+            try {
+                const data = await fetchJson('/stats');
+                statsOutput.textContent = JSON.stringify(data.stats, null, 2);
+            } catch (err) {
+                statsOutput.textContent = err.message;
+            }
+        };
+
+        eventForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const payload = {
+                type: formData.get('type'),
+                detail: formData.get('detail')
+            };
+            try {
+                await fetchJson('/event', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                updateStats();
+            } catch (err) {
+                alert(err.message);
+            }
+            event.target.reset();
+        });
+
+        refreshStats.addEventListener('click', updateStats);
+
+        summaryBtn.addEventListener('click', async () => {
+            try {
+                await fetchJson('/summary');
+                alert('Summary logged to the server console.');
+            } catch (err) {
+                alert(err.message);
+            }
+        });
+
+        updateStats();
+    </script>
+</body>
+</html>
