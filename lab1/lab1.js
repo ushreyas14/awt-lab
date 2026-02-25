@@ -160,3 +160,5 @@ server.listen(PORT, () => {
     logLine(`Event server running at http://localhost:${PORT}`);
     runDemoSequence();
 });
+
+console.log(PORT);

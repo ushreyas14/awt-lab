@@ -20,3 +20,42 @@
 [2026-01-21T08:46:04.281Z] user-purchase: 2
 [2026-01-21T08:46:04.282Z] profile-update: 2
 [2026-01-21T08:46:04.282Z] ----------------------
+[2026-02-04T04:26:24.241Z] Event server running at http://localhost:8080
+[2026-02-04T04:26:24.660Z] Ava logged in
+[2026-02-04T04:26:25.047Z] Purchase recorded: Headphones
+[2026-02-04T04:26:25.459Z] Profile update: Shipping Address
+[2026-02-04T04:26:25.849Z] Noah logged in
+[2026-02-04T04:26:26.249Z] Purchase recorded: Keyboard
+[2026-02-04T04:26:26.660Z] Ava logged out
+[2026-02-04T04:26:27.056Z] Profile update: Payment Method
+[2026-02-04T04:26:27.454Z] Noah logged out
+[2026-02-04T04:26:28.260Z] --- Event Summary ---
+[2026-02-04T04:26:28.260Z] user-login: 2
+[2026-02-04T04:26:28.260Z] user-logout: 2
+[2026-02-04T04:26:28.260Z] user-purchase: 2
+[2026-02-04T04:26:28.261Z] profile-update: 2
+[2026-02-04T04:26:28.261Z] ----------------------
+[2026-02-04T04:29:18.064Z] Event server running at http://localhost:8080
+[2026-02-04T04:29:18.470Z] Ava logged in
+[2026-02-04T04:29:18.869Z] Purchase recorded: Headphones
+[2026-02-04T04:29:19.268Z] Profile update: Shipping Address
+[2026-02-04T04:29:19.667Z] Noah logged in
+[2026-02-04T04:29:20.071Z] Purchase recorded: Keyboard
+[2026-02-04T04:29:20.471Z] Ava logged out
+[2026-02-04T04:29:20.883Z] Profile update: Payment Method
+[2026-02-04T04:29:21.281Z] Noah logged out
+[2026-02-04T04:29:22.072Z] --- Event Summary ---
+[2026-02-04T04:29:22.072Z] user-login: 2
+[2026-02-04T04:29:22.073Z] user-logout: 2
+[2026-02-04T04:29:22.073Z] user-purchase: 2
+[2026-02-04T04:29:22.073Z] profile-update: 2
+[2026-02-04T04:29:22.073Z] ----------------------
+[2026-02-04T04:39:14.832Z] 1 logged in
+[2026-02-04T04:39:33.214Z] 2 logged out
+[2026-02-04T04:39:52.365Z] Purchase recorded: purchase
+[2026-02-04T04:39:55.345Z] --- Event Summary ---
+[2026-02-04T04:39:55.345Z] user-login: 3
+[2026-02-04T04:39:55.346Z] user-logout: 3
+[2026-02-04T04:39:55.347Z] profile-update: 2
+[2026-02-04T04:39:55.347Z] ----------------------
+[2026-02-04T04:39:55.346Z] user-purchase: 3
