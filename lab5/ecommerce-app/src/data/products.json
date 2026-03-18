@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Bluetooth Headphones",
+      "price": 59.99,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop",
+      "category": "Electronics",
+      "description": "Premium wireless headphones with noise cancellation and 30-hour battery life.",
+      "rating": 4.5,
+      "stock": 25
+    },
+    {
+      "id": 2,
+      "name": "Running Sneakers",
+      "price": 89.99,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop",
+      "category": "Footwear",
+      "description": "Lightweight running shoes with cushioned sole for maximum comfort.",
+      "rating": 4.2,
+      "stock": 40
+    },
+    {
+      "id": 3,
+      "name": "Smart Watch Pro",
+      "price": 199.99,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop",
+      "category": "Electronics",
+      "description": "Feature-packed smartwatch with heart rate monitor and GPS tracking.",
+      "rating": 4.7,
+      "stock": 15
+    },
+    {
+      "id": 4,
+      "name": "Leather Backpack",
+      "price": 124.99,
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop",
+      "category": "Accessories",
+      "description": "Genuine leather backpack with laptop compartment and multiple pockets.",
+      "rating": 4.3,
+      "stock": 30
+    },
+    {
+      "id": 5,
+      "name": "Portable Bluetooth Speaker",
+      "price": 39.99,
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300&h=300&fit=crop",
+      "category": "Electronics",
+      "description": "Waterproof portable speaker with 360-degree sound and 12-hour playback.",
+      "rating": 4.1,
+      "stock": 50
+    },
+    {
+      "id": 6,
+      "name": "Sunglasses Classic",
+      "price": 29.99,
+      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop",
+      "category": "Accessories",
+      "description": "UV400 protection polarized sunglasses with lightweight titanium frame.",
+      "rating": 4.0,
+      "stock": 60
+    },
+    {
+      "id": 7,
+      "name": "Organic Coffee Beans",
+      "price": 18.99,
+      "image": "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=300&h=300&fit=crop",
+      "category": "Food",
+      "description": "Single-origin Arabica coffee beans, medium roast, 1lb bag.",
+      "rating": 4.8,
+      "stock": 100
+    },
+    {
+      "id": 8,
+      "name": "Yoga Mat Premium",
+      "price": 34.99,
+      "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=300&h=300&fit=crop",
+      "category": "Fitness",
+      "description": "Eco-friendly non-slip yoga mat with alignment lines, 6mm thick.",
+      "rating": 4.4,
+      "stock": 35
+    },
+    {
+      "id": 9,
+      "name": "Desk Lamp LED",
+      "price": 44.99,
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057ab6fe?w=300&h=300&fit=crop",
+      "category": "Home",
+      "description": "Adjustable LED desk lamp with 5 brightness levels and USB charging port.",
+      "rating": 4.6,
+      "stock": 20
+    },
+    {
+      "id": 10,
+      "name": "Stainless Steel Water Bottle",
+      "price": 24.99,
+      "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=300&h=300&fit=crop",
+      "category": "Accessories",
+      "description": "Double-wall insulated bottle keeps drinks cold 24hrs or hot 12hrs, 750ml.",
+      "rating": 4.3,
+      "stock": 75
+    }
+  ]
+}
