@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}{% if object %}Edit Student{% else %}Add Student{% endif %}{% endblock %}
+
+{% block content %}
+<section class="panel reveal">
+    <div class="panel-head">
+        <h2>{% if object %}Edit Student{% else %}Add New Student{% endif %}</h2>
+        <p>Fill in the details below and save to update the directory.</p>
+    </div>
+    <div class="content-pad">
+        <form method="post">
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            <div class="form-grid">
+                {% for field in form.visible_fields %}
+                    <div class="field-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.errors %}
+                            <div class="field-error">{{ field.errors|striptags }}</div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="form-actions">
+                <a href="{% url 'student-list' %}" class="btn btn-muted">Cancel</a>
+                <button type="submit" class="btn btn-main">Save Student</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

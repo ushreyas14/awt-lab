@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete Student{% endblock %}
+
+{% block content %}
+<section class="panel danger-panel reveal">
+    <div class="panel-head">
+        <h2>Delete Student Record</h2>
+        <p>Please confirm before removing this student from the system.</p>
+    </div>
+    <div class="content-pad">
+        <div class="danger-highlight">
+            {{ object }}
+        </div>
+        <p>This action permanently deletes the selected record and cannot be reversed.</p>
+        <form method="post" class="form-actions">
+            {% csrf_token %}
+            <a href="{% url 'student-list' %}" class="btn btn-muted">Cancel</a>
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        </form>
+            </div>
+</section>
+{% endblock %}
