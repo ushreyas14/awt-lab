@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8 | CRUD Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">Lab 8</p>
+                <h1>CRUD Dashboard</h1>
+                <p class="subtitle">Create, read, update, and delete student records using Flask, HTML, and CSS.</p>
+            </div>
+            <div class="stats">
+                <article>
+                    <span>{{ total_count }}</span>
+                    <small>Total Records</small>
+                </article>
+                <article>
+                    <span>{{ mode }}</span>
+                    <small>Current Mode</small>
+                </article>
+            </div>
+        </header>
+
+        <main class="layout">
+            <section class="panel form-panel">
+                <div class="panel-header">
+                    <h2>{{ mode }} Student</h2>
+                    <p>Use the form below to save a record in the SQLite database.</p>
+                </div>
+
+                {% if error %}
+                <p class="error-banner">{{ error }}</p>
+                {% endif %}
+
+                <form action="{{ action }}" method="post" class="crud-form">
+
+                    <label>
+                        Student Name
+                        <input type="text" name="name" placeholder="Enter student name" value="{{ form_values.name }}" required>
+                    </label>
+
+                    <label>
+                        Age
+                        <input type="number" name="age" placeholder="Enter age" min="1" value="{{ form_values.age }}" required>
+                    </label>
+
+                    <label>
+                        Course
+                        <input type="text" name="course" placeholder="Enter course" value="{{ form_values.course }}" required>
+                    </label>
+
+                    <div class="actions">
+                        <button type="submit" class="primary">{{ mode }} Record</button>
+                        {% if edit_student %}
+                        <a class="secondary-link" href="{{ url_for('home') }}">Cancel Edit</a>
+                        {% else %}
+                        <button type="reset" class="secondary">Reset</button>
+                        {% endif %}
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel table-panel">
+                <div class="panel-header">
+                    <h2>Records</h2>
+                    <p>Manage your saved student list from this table.</p>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Course</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if students %}
+                            {% for student in students %}
+                            <tr>
+                                <td>{{ student.id }}</td>
+                                <td>{{ student.name }}</td>
+                                <td>{{ student.age }}</td>
+                                <td>{{ student.course }}</td>
+                                <td>
+                                    <div class="row-actions">
+                                        <a class="edit-btn" href="{{ url_for('edit_student_page', student_id=student.id) }}">Edit</a>
+                                        <form action="{{ url_for('remove_student', student_id=student.id) }}" method="post" class="inline-form">
+                                            <button type="submit" class="delete-btn">Delete</button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td colspan="5" class="empty-state">No records yet. Add the first student above.</td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

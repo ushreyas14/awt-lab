@@ -27,7 +27,7 @@ app.post('/api/products', async (req, res)=>{
   }
 });
 
-mongoose.connect("mongodb+srv://mycodes61:Mcds1461%40@backenddb.jkmniuw.mongodb.net/Node-API?appName=backendDB")
+mongoose.connect("mongodb://127.0.0.1:27017/node-api")
   .then(() => {
     console.log('Connected to database!');
     app.listen(3000, () => {
